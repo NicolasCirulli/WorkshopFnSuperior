@@ -112,12 +112,12 @@ console.log( sumaDeNumeros )
 
 console.log(  alumnos )
 
-const fn = ( acc, act, index, array ) => {
+ 
+const stringNombresAlumnos = alumnos.reduce( ( acc, act, index, array ) => {
     if( index > 0 ){
         return acc + ' - '  + act.nombre
     }
     return acc + act.nombre
-}
-const stringNombresAlumnos = alumnos.reduce( fn , 'Alumnos: ' )
+} , 'Alumnos: ' )
 
 console.log( stringNombresAlumnos)
